@@ -4,6 +4,9 @@ using NGuava;
 
 namespace EventBusTests
 {
+    /// <summary>
+    /// Test class for IMultiMap.
+    /// </summary>
     [TestClass]
     public class UnitTestIMultiMap
     {
@@ -15,7 +18,6 @@ namespace EventBusTests
             map.Add(1, 2);
             map.Clear();
             Assert.IsTrue(map.CountPairs == 0);
-
         }
 
         [TestMethod]
@@ -41,7 +43,6 @@ namespace EventBusTests
             IMultiMap<int, int> map = HashMultiMap<int, int>.Create();
             map.Add(100, 101);
             Assert.IsTrue(map.ContainsKeyValuePair(new System.Collections.Generic.KeyValuePair<int,int>(100,101)));
-
         }
 
         [TestMethod]
@@ -161,7 +162,5 @@ namespace EventBusTests
                 }
             }
         }
-
-       
     }
 }
