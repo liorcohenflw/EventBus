@@ -10,6 +10,10 @@ namespace EventBusTests
     [TestClass]
     public class UnitTestIMultiMap
     {
+        #region Trivial tests
+        /// <summary>
+        /// Trivial test for clear method.
+        /// </summary>
         [TestMethod]
         public void TestClear()
         {
@@ -19,7 +23,9 @@ namespace EventBusTests
             map.Clear();
             Assert.IsTrue(map.CountPairs == 0);
         }
-
+        /// <summary>
+        /// Trivial test for ContainsKey method.
+        /// </summary>
         [TestMethod]
         public void TestContainsKey()
         {
@@ -28,7 +34,9 @@ namespace EventBusTests
             Assert.IsTrue(map.ContainsKey(3));
             Assert.IsFalse(map.ContainsKey(45));
         }
-
+        /// <summary>
+        /// Trivial test for ContainsValue method.
+        /// </summary>
         [TestMethod]
         public void TestContainsValue()
         {
@@ -36,7 +44,9 @@ namespace EventBusTests
             map.Add(4, 6);
             Assert.IsTrue(map.ContainsValue(6));
         }
-
+        /// <summary>
+        /// Trivial test for ContainsKeyValuePair method.
+        /// </summary>
         [TestMethod]
         public void TestContainsKeyValuePair()
         {
@@ -44,7 +54,9 @@ namespace EventBusTests
             map.Add(100, 101);
             Assert.IsTrue(map.ContainsKeyValuePair(new System.Collections.Generic.KeyValuePair<int,int>(100,101)));
         }
-
+        /// <summary>
+        /// Trivial test for Add method.
+        /// </summary>
         [TestMethod]
         public void TestAdd()
         {
@@ -52,7 +64,9 @@ namespace EventBusTests
             map.Add(2, 3);
             Assert.IsTrue(map.ContainsKeyValuePair(new System.Collections.Generic.KeyValuePair<int,int>(2,3)));
         }
-
+        /// <summary>
+        /// Trivial test for Get method.
+        /// </summary>
         [TestMethod]
         public void TestGet()
         {
@@ -65,7 +79,9 @@ namespace EventBusTests
                 Assert.IsTrue(item == 3 || item == 4 || item == 5);
             }
         }
-
+        /// <summary>
+        /// Trivial test for CountPair method.
+        /// </summary>
         [TestMethod]
         public void TestCountPair()
         {
@@ -80,7 +96,9 @@ namespace EventBusTests
             Assert.IsTrue(map.CountPairs == 0);
             
         }
-
+        /// <summary>
+        /// Trivial test for Remove method.
+        /// </summary>
         [TestMethod]
         public void TestRemove()
         {
@@ -95,7 +113,9 @@ namespace EventBusTests
             map.Remove(2, 3);
             Assert.IsFalse(map.ContainsKeyValuePair(new System.Collections.Generic.KeyValuePair<int, int>(2, 3)));
         }
-
+        /// <summary>
+        /// Trivial test for RemoveAll method.
+        /// </summary>
         [TestMethod]
         public void TestRemoveAll()
         {
@@ -109,7 +129,9 @@ namespace EventBusTests
             Assert.IsFalse(map.ContainsValue(5));
             Assert.IsFalse(map.ContainsValue(3));
         }
-
+        /// <summary>
+        /// Trivial test for GetSet method.
+        /// </summary>
         [TestMethod]
         public void TestGetSet()
         {
@@ -122,7 +144,9 @@ namespace EventBusTests
             Assert.IsTrue(set.Contains(4));
             Assert.IsTrue(set.Contains(5));
         }
-
+        /// <summary>
+        /// Trivial test for CountPairs method.
+        /// </summary>
         [TestMethod]
         public void TestCountPairs()
         {
@@ -136,7 +160,9 @@ namespace EventBusTests
             map.Add(29, 5);
             Assert.IsTrue(map.CountPairs == 7);
         }
-
+        /// <summary>
+        /// Trivial test for AddAll method.
+        /// </summary>
         [TestMethod]
         public void TestAddAll()
         {
@@ -162,5 +188,9 @@ namespace EventBusTests
                 }
             }
         }
+        #endregion
+        #region Scenarios tests
+
+        #endregion
     }
 }
