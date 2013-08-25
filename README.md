@@ -1,20 +1,20 @@
 EventBus
 ========
 
-Event Bus inspired by google guava project, on .NET platform.
-This project is a porting of the Guava/EventBus to .NET platform.
-EventBus is a robust and optimized publish/subscribe component. It 
+Event Bus inspired by google guava project. On .NET platform.
+This project is a porting of the Guava EventBus to .NET platform.
+EventBus is a robust and optimized publish/subscribe component.It 
 is simplifies the communication between components in the application.
 Moreover it communicates between components in a loosely coupled manner 
- ,where each component never needs to know or hold explicitly each other.
-It is very convenient tool for programmers, due to the fact that it is easy 
-to integrate the publishers and subscribers, no interfaces needed.
+, where each component never needs to know or hold explicitly each other.
+It is very convenient tool for programmers , due to the fact that it is easy 
+to integrate the publishers and subscribers , no interfaces needed.
 
-Event Bus API
+Event Bus Api
 =============
-* Register a subscriber to events. To integrate it there simple steps to do , moreover on it is described at User Guide paragraph.
+* Register a subscriber to events . To integrate it there simple steps to do , moreover on it is described at User Guide paragraph.
 void Register(Object subscriber)
-* Unregister a subscriber from this point and on,  the subscriber will not get a message when event associated with subscriber is dispatched.
+* Unregister a subscriber from this point and on  the subscriber will not get a message when event associated with subscriber is dispatched.
 void UnRegister(Object subscriber)
 * Post an event associated with subscribers. The creation of communication from event to subscribers is described at User Guide paragraph.
 void Post(Object event)
@@ -25,13 +25,9 @@ So we have three important Entities in this story : subscriber , publisher and e
 So who can be the publisher subscriber , it can be any components that has reference to event bus and event can be any type of variable.
 So without further explanations lets give some example : 
 First lets define an instance of EventBus some where in the app.
-<pre>
 <code>
-
 IEventBus eventBus = new EventBus();
-
 </code>
-<pre/>
 The subscriber : 
 ----------------------
 <pre>
