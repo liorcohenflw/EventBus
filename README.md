@@ -32,6 +32,8 @@ IEventBus eventBus = new EventBus();
 </pre>
 The subscriber : 
 ----------------------
+Subscribers that would like to declare a method as handler for a specific message, should add 
+this attribute to the method decleration.
 <pre>
 <code>
 public class StockRecorder
@@ -44,6 +46,17 @@ public class StockRecorder
 }
 </code>
 </pre>
+<dl>
+<dt> 
+Please notice the following:
+</dt>
+<dd>
+a.The return type of the subscribed method is irrelevant and generally should be void.
+</dd>
+<dd>
+b.The method must have one and only one parameter, and its type    determines the event type.
+</dd>
+</dl>
  The event:
 ---------------
 <pre>
